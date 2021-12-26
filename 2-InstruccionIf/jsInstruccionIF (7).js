@@ -15,11 +15,11 @@ el siguiente mensaje:
     edadIngresada = document.getElementById('edad').value;
     estadoCivilIngresado = document.getElementById("estadoCivil").value; 
     
-    if(edadIngresada < 18 && estadoCivilIngresado != "Soltero")
+    if(edadIngresada >= 18 && estadoCivilIngresado == "Soltero")
     { 
         alert("Es muy pequeño para NO ser soltero");
     }   
-    alert("Este está funcionando");
+    
     
     //tomo la edad 
 
