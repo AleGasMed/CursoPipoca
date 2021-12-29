@@ -31,7 +31,7 @@ function mostrar()
 		}
 	}*/
 
-	if(edadIngresada < 1)
+	if (edadIngresada < 1)
 	{
 		alert("la edad no puede ser validada");
 	}
@@ -39,8 +39,8 @@ function mostrar()
 	{
 		alert("Usted es mayor de edad");
 	}
-	else
+	else 
 	{
-		alert("Usted es menor de edadS");
+		alert("Usted es menor de edad");
 	}
 }   //FIN DE LA FUNCIÓN

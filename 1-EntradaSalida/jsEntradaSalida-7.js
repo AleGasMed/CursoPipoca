@@ -18,16 +18,44 @@ function sumar()
 
 function restar()
 {
+    var numero1;
+    var numero2;
+    var resultado;
+
+    numero1 = document.getElementById("numeroUno").value;
+    numero2 = document.getElementById("numeroDos").value;
+
+    resultado = parseInt(numero1) - parseInt(numero2);
+
+    alert("La resta es: " + resultado);
     
 }
 
 function multiplicar()
 { 
-	
+	var numero1;
+    var numero2;
+    var resultado;
+
+    numero1 = document.getElementById("numeroUno").value;
+    numero2 = document.getElementById("numeroDos").value;
+
+    resultado = parseInt(numero1) * parseInt(numero2);
+
+    alert("La multiplicación es " + resultado);
 }
 
 function dividir()
 {
-	
+    var numero1;
+    var numero2;
+    var resultado;
+    
+    numero1 = document.getElementById("numeroUno").value;
+    numero2 = document.getElementById("numeroDos").value;
+
+    resultado = parseInt(numero1) / parseInt(numero2);
+
+    alert("La división es " + resultado);
 }
 
