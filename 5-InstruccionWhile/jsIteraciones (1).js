@@ -4,11 +4,13 @@ repeticiones con números ASCENDENTE,
 desde el 1 al 10.*/
 { 
 	var numero;
-	numero = 0;
+
+	numero = 0 
+
 	while(numero < 10)
 	{
-		numero = numero +1;
-		alert("El número es " + numero);
+		numero = numero + 1
+		alert(numero);
 	}
 
 	
