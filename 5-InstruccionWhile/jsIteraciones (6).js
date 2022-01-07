@@ -3,18 +3,27 @@ function mostrar()
     var numero;
     var suma;
     var promedio;
+    var contador;
 
-    numero = 0;
+    contador = 0;
+    suma = 0;
     
-    numero = prompt("Coloque un numero");
+   
 
-    while(numero < 5)
+    while(contador < 5)
     {
         numero = parseInt(numero) + 1;
-        alert(numero);
-        
+        numero = prompt("Coloque un numero");
+        contador = contador + 1;
+        suma = parseInt(numero) + suma;
     }
+    
+    promedio = suma / 5;
 
+    document.getElementById("suma").value = suma;
+    document.getElementById("promedio").value = promedio;
+
+    
     
     
     

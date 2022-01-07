@@ -16,7 +16,6 @@ function mostrar()
     while(decision != "no")
     {
         numero = prompt("Coloque un número");
-        //decision = prompt("¿Desea continuar?");
         suma = parseInt(numero) + suma;
         contador = contador + 1;
         do

@@ -1,33 +1,43 @@
 function mostrar()
 {
-    var numeropositivo;
-    var numeronegativo;
+    var numero;
     var suma;
     var multiplicacion;
-    var contador;
     var decision;
+    var numeroNeg;
+    var numeroPos;
 
-    suma = 0
-    contador = 0
-    multiplicacion = 1
+    suma = 0;
 
     while(decision != "no")
     {
-        numeropositivo = prompt("Inserte un número positivo");
-        numeronegativo = prompt("Inserte un número negativo");
-        suma = parseInt(numeropositivo) + suma;
-        alert(suma)
-        multiplicacion = parseInt(numeronegativo) * multiplicacion;
-        alert(multiplicacion)
-        contador = contador + 1;
+        numero = prompt("Inserte un número");
+
+        if(numero[0] == "-")
+        {
+            numeroNeg = numero;
+        }
+        else
+        {
+            numeroPos = numero;
+        }
+        suma = parseInt(numeroPos) + suma;
+        
+        if(multiplicacion == undefined)
+        {
+            multiplicacion = numeroNeg;
+        }
+        else
+        {
+            multiplicacion = parseInt(numeroNeg) * multiplicacion;
+        }
+        
         do
         {
-            decision= prompt("¿Desea continuar?");
+            decision = prompt("¿Desea continuar?");
         }while(decision != "no" && decision != "si");
     }
     
     document.getElementById("suma").value = suma;
     document.getElementById("producto").value = multiplicacion;
-
-
 }//FIN DE LA FUNCIÓN
