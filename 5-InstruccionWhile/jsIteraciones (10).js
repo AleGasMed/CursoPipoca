@@ -30,7 +30,6 @@ function mostrar()
         {
             sumaPos = parseInt(numero) + sumaPos;//suma los positivos;
             numeroPos = numeroPos + 1;
-            promedioPos = numero / numeroPos;
            
         }
              
@@ -74,3 +73,54 @@ function mostrar()
 
     
 }//FIN DE LA FUNCIÓN
+    /*var numero;
+    var decision;
+    var sumaNeg = 0;
+    var sumaPos = 0;
+    var numeroNeg = 0;
+    var numeroPos = 0;
+    var ceros = 0;
+    var numerosPares = 0;
+    var promedioPos;
+    var promedioNeg;
+    var resta;
+
+    while(decision != "no")
+    {
+        numero = prompt("Inserte un número");
+        
+        if(numero[0] == "-")
+        {
+            sumaNeg = sumaNeg + parseInt(numero);
+            alert("Suma de los negativos " + sumaNeg);
+            numeroNeg = numeroNeg + 1;
+            alert("Suma de cantidad de negativos " + numeroNeg);
+            promedioNeg = sumaNeg / numeroNeg;
+            alert("promedio de negativos " + promedioNeg);
+        }
+        else if(numero > 0)
+        {
+            sumaPos = sumaPos + parseInt(numero);
+            alert("Suma de los positivos " + sumaPos);
+            numeroPos = numeroPos + 1;
+            alert("Suma de cantidad de positivos " + numeroPos);
+            promedioPos = sumaPos / numeroPos;
+            alert("promedio de negativos " + promedioPos);
+        }
+
+        if(numero == 0)
+        {
+            ceros = ceros + 1;
+            alert("Suma de cantidad de ceros " + ceros);
+        }
+
+        if(numero % 2 == 0)
+        {
+            numerosPares = numerosPares + 1;
+            alert("Cantidad de números pares " + numerosPares);
+        }
+        resta = parseInt(numeroPos) - parseInt(numeroNeg);
+        alert("diferencia entre positivos y negativos" + resta);
+    }
+    resta = parseInt(numeroPos) - parseInt(numeroNeg);
+    alert("diferencia entre positivos y negativos" + resta);*/

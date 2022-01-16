@@ -1,15 +1,15 @@
 function mostrar()
 {
-    var dato;
+   var dato;
 
-    dato = prompt("Colocar un número entre el 0 y el 9 inclusive");
+   dato = prompt("Coloque un número entre 0 y 9 inclusive");
 
-    while(dato >= 10)
-    {
-        dato = prompt("Incorrecto, vuelva a colocar algún número solicitado");
-    }
+   while(dato > 9 && dato[0])
+   {
+    dato = prompt("Incorrecto, vuelva a ingresar otro número");
+   }
 
-    document.getElementById("Numero").value = dato;
+   document.getElementById("Numero").value = dato;
     
     
     
