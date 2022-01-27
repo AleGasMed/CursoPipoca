@@ -40,6 +40,7 @@ function Materiales ()
     var cuadrado;
 
     ancho = document.getElementById("Largo").value;//lo importante es la altura en un cuadrado
+
     largo = document.getElementById("Ancho").value;
 
     perimetroAlrectangulo = 2 * parseInt(largo) + 2 * parseInt(ancho);
@@ -49,7 +50,6 @@ function Materiales ()
     bolsaDeCal = cuadrado * 3;
 
     alert("Se necesitan " + bolsaDeCemento + " de cemento " + "\n" + "Se necesitan " + bolsaDeCal + " de cal");
-
 
 
     

@@ -4,22 +4,18 @@ function mostrar()
 
 	resultado = Math.floor((Math.random() * (11-1))+1);
 
-	if(resultado >= 9 && resultado <= 10)
+	if(resultado >= 9)
 	{
-		alert("EXCELENTE, USTED SE SACÓ UN " + resultado);
+		alert("EXCELENTE " + resultado);
 	}
-	else if(resultado >= 4 && resultado <=8)
+	else if(resultado >= 4 && resultado < 9)
 	{
-		alert("APROBÓ, USTED SE SACÓ UN " + resultado);
-	}
+		alert("APROBÓ " + resultado);
+	}	
 	else
 	{
-		alert("Vamos, para la próxima se puede, usted se sacó un " + resultado);
+		alert("Vamos, la próxima se puede " + resultado)
 	}
-
-	
-	//Genero el número RANDOM entre 1 y 10 
-	
 	
 
 	

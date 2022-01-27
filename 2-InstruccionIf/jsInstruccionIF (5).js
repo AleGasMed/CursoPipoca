@@ -7,13 +7,8 @@ NO es adolescente.*/
 
 	edad = document.getElementById("edad").value;
 
-	if(edad >= 18 || edad <= 12 )
+	if(edad >= 18 || edad < 13)
 	{
 		alert("Usted no es adolescente");
 	}
-	
-//tomo la edad  
-
-	
-
 }//FIN DE LA FUNCIÓN

@@ -29,16 +29,15 @@ function verificar()
   {
     alert("Usted es un ganador!!! y en solo " + contadorIntentos);
   }
-
-  if(numeroIngresado < numeroSecreto)
+  else if(numeroIngresado < numeroSecreto)
   {
     faltante = numeroSecreto - numeroIngresado;
     alert("Falta " + faltante + " para llegar al numero secreto");
   }
-  else if(numeroIngresado > numeroSecreto)
+  else 
   {
     sobrante = numeroIngresado - numeroSecreto;
-    alert("Se pasó  " + sobrante + " del numero secreto");
+    alert("Se pasó " + sobrante + " del numero secreto");
   }
   
   if(numeroIngresado != numeroSecreto)

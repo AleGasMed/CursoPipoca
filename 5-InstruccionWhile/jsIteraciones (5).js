@@ -2,12 +2,12 @@ function mostrar()
 {
     var sexo;
 
-    sexo = prompt("¿Cuál es su sexo?");
+    sexo = prompt("Coloque, para su sexo, una f para femenino o una m para masculino");
 
     while(sexo != "f" && sexo != "m")
     {
-        sexo = prompt("Inválido, inserte alguna letra solicitada");
-    }
+        sexo = prompt("Incorrecto, inserte alguna letra solicitada");
+    }   
 
     document.getElementById("Sexo").value = sexo;
    

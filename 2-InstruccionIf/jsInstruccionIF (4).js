@@ -11,12 +11,11 @@ persona es adolescente, edad entre 13 y 17 años
 
     edad = document.getElementById("edad").value;
 
-    if(edad <= 17 && edad >=13)
+    if(edad >=13 && edad <=17)
     {
         alert("Usted es adolescente");
     }
-   
-//tomo la edad  
+
 
 }//FIN DE LA FUNCIÓN
 

@@ -1,18 +1,13 @@
 function mostrar()
 {
-   var dato;
+    var dato;
 
-   dato = prompt("Coloque un número entre 0 y 9 inclusive");
+    dato = prompt("Coloque un número entre el 0 y el 9 inclusive");
 
-   while(dato > 9 && dato[0])
-   {
-    dato = prompt("Incorrecto, vuelva a ingresar otro número");
-   }
+    while(dato > 9)
+    {
+        dato = prompt("Incorrecto, inserte un número entre el 0 y el 9 inclusive");
+    }
 
-   document.getElementById("Numero").value = dato;
-    
-    
-    
-
-
+    document.getElementById("Numero").value = dato;
 }//FIN DE LA FUNCIÓN

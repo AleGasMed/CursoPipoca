@@ -11,80 +11,71 @@ var tijera3;
 
 function comenzar()
 {
-    
-
     eleccionMaquina = numeroSecreto = Math.floor((Math.random() * 3) + 1);
-    alert(eleccionMaquina + " eleccion");
     
-    if(eleccionMaquina == 1)
+    switch(eleccionMaquina)
     {
-        piedra1 = eleccionMaquina;
-        alert("eleccion de la maquina piedra " + piedra1);
-    }
-
-    if(eleccionMaquina == 2)
-    {
-        papel2 = eleccionMaquina;
-        alert("eleccion de la maquina " + papel2);
-    }
-
-    if(eleccionMaquina == 3)
-    {
-        tijera3 = eleccionMaquina;
-        alert("eleccion de la maquina " + tijera3)
+        case 1:
+            piedra1 = eleccionMaquina;
+            break;
+        case 2:
+            papel2 = eleccionMaquina;
+            break;
+        default:
+            tijera3 = eleccionMaquina;
+            break;
     }
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-	if(eleccionMaquina = piedra1)
+    if(piedra1 == tijera3)
     {
-        alert("Usted empató contra la piedra")
+        alert("Usted perdió");
     }
 
-    if(eleccionMaquina > piedra1 && eleccionMaquina < papel2)
+	if(piedra1 == eleccionMaquina)
     {
-        alert("Usted perdió contra el papel");
+        alert("Usted empató");
     }
-
-    if(eleccionMaquina > piedra1 && eleccionMaquina == tijera3)
+    
+    if(piedra1 == papel2)
     {
-        alert("Usted ganó contra tijera");
+        alert("Usted ganó");
     }
 
 }//FIN DE LA FUNCIÓN
 function papel()
 {
-    if(eleccionMaquina = papel2)
+    if(papel2 == eleccionMaquina)
     {
-        alert("Usted empató contra la papel 2")
+        alert("Usted empató");
     }
 
-    if(eleccionMaquina < papel2)
+    if(papel2 == piedra1)
     {
-        alert("Usted ganó contra la piedra 2");
+        alert("Usted perdió");
     }
 
-    if(eleccionMaquina > papel2)
+    if(papel2 == tijera3)
     {
-        alert("Usted perdió contra la tijera 2");
+        alert("Usted ganó")
     }
-
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	if(eleccionMaquina = tijera3)
+	if(tijera3 == eleccionMaquina)
     {
-        alert("Usted empató contra la tijera 3");
+        alert("Usted empató");
     }
 
-    if(eleccionMaquina < tijera3 && eleccionMaquina == piedra1)
+    if(tijera3 == papel2)
     {
-        alert("Usted perdió contra la piedra 3");
+        alert("Usted perdió");
     }
-
-    if(eleccionMaquina < tijera3 && eleccionMaquina < piedra1)
-    {
-        alert("Usted gano contra el papel 3");
-    }
+   
+   if(tijera3 == piedra1)
+   {
+       alert("Usted ganó");
+   }
 }//FIN DE LA FUNCIÓN

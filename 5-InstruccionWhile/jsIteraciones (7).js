@@ -4,27 +4,26 @@ la suma acumulada y el promedio.*/
 function mostrar()
 {
     var numero;
-    var decision;
-    var contador = 0
+    var contador = 0;
     var suma = 0;
     var promedio;
+    var decision;
 
     while(decision != "no")
     {
-        numero = prompt("Inserte un número");
+        numero = prompt("Coloque los números que desee");
         contador = contador + 1;
-        suma = suma + parseInt(numero);
+        suma = parseInt(numero) + suma;
         
         do
         {
-            decision = prompt("¿Desea continuar?")
+            decision = prompt("¿Desea continuar?");   
         }
-        while(decision != "si" && decision != "no" )
+        while(decision != "no" && decision != "si")
     }
 
     promedio = suma / contador;
 
     document.getElementById("suma").value = suma;
-
     document.getElementById("promedio").value = promedio;
 }//FIN DE LA FUNCIÓN

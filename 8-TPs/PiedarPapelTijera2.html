@@ -39,12 +39,12 @@
 	   <h1>Piedra, papel o tijera 1.0</h1>
 	 			
 
-			<input type="text" readonly id="ganadas" placeholder="Juegos ganados">
-			<input type="text" readonly id="perdidas" placeholder="Juegos perdidos">
-			<input type="text" readonly id="empatadas" placeholder="Juegos empatados" >
-			<img class="PiedraPapelTijera animated zoomInRight " src="imagenes/piedra.jpg" onclick="piedra()">
-			<img class="PiedraPapelTijera animated zoomInUp" src="imagenes/papel.jpg" onclick="papel()">
-			<img class="PiedraPapelTijera animated zoomInLeft"  src="imagenes/tijera.jpg" onclick="tijera()">
+			<input type="text" id="ganadas" placeholder="Juegos ganados">
+			<input type="text" id="perdidas" placeholder="Juegos perdidos">
+			<input type="text" id="empatadas" placeholder="Juegos empatados" >
+			<img class="PiedraPapelTijera animated zoomInRight " src="imagenes/piedra.jpg" onclick="piedra(),mostrarResultado()">
+			<img class="PiedraPapelTijera animated zoomInUp" src="imagenes/papel.jpg" onclick="papel(),mostrarResultado()">
+			<img class="PiedraPapelTijera animated zoomInLeft"  src="imagenes/tijera.jpg" onclick="tijera(),mostrarResultado()">
 
 	 </form>	
   </div>

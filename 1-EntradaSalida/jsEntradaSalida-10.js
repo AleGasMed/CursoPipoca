@@ -11,6 +11,8 @@ function mostrarAumento()
 
     resultado = 25 / 100 * parseInt(importe);
 
-    document.getElementById("resultado").value = parseInt(importe) - resultado ;
-	/*primer comando de consola*/
+    document.getElementById("resultado").value = parseInt(importe) - resultado;
+
+
+    
 }

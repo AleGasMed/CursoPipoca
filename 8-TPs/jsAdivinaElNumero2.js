@@ -29,7 +29,6 @@ function verificar()
 	contadorIntentos = contadorIntentos + 1;
 
 	document.getElementById("intentos").value = contadorIntentos;
-	
 
 	if(numero == numeroSecreto)
 	{
@@ -61,9 +60,6 @@ function verificar()
 		}
 	}
 	
-
-	
-
 	/*if(numero == numeroSecreto)
 	{
 		if(contadorIntentos == 1)

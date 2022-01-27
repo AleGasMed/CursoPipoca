@@ -1,11 +1,59 @@
-/*1.	Para el departamento de facturación:
+/*1.Para el departamento de facturación:
 A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
 function Sumar () 
 {
-	var precioIngresadoUno;
+	var precio1;
+	var precio2;
+	var precio3;
+	var resultado;
+
+	precio1 = document.getElementById("PrecioUno").value;
+	precio2 = document.getElementById("PrecioDos").value;
+	precio3 = document.getElementById("PrecioTres").value;
+
+	resultado = parseInt(precio1) + parseInt(precio2) + parseInt(precio3);
+
+	alert("El precio de todos los productos es " + resultado);
+	
+}
+function Promedio () 
+{
+	var precio1;
+	var precio2;
+	var precio3;
+	var resultado;
+	var promedio;
+
+	precio1 = document.getElementById("PrecioUno").value;
+	precio2 = document.getElementById("PrecioDos").value;
+	precio3 = document.getElementById("PrecioTres").value;
+
+	resultado = parseInt(precio1) + parseInt(precio2) + parseInt(precio3);
+
+	promedio = resultado / 3;
+
+	alert("El promedio de todos los productos es " + promedio);
+
+}
+function PrecioFinal () 
+{
+	var precio1;
+	var precio2;
+	var precio3;
+	var resultado;
+
+	precio1 = document.getElementById("PrecioUno").value;
+	precio2 = document.getElementById("PrecioDos").value;
+	precio3 = document.getElementById("PrecioTres").value;
+
+	resultado = (parseInt(precio1) + parseInt(precio2) + parseInt(precio3)) * 1.21;
+
+	alert("El precio de todos los productos es " + resultado);
+}
+/*var precioIngresadoUno;
 	var precioIngresadoDos;
 	var precioIngresadoTres;
 	var suma;
@@ -21,10 +69,8 @@ function Sumar ()
 
 	alert("la suma es " + suma);
 
-}
-function Promedio () 
-{
-	var precioIngresadoUno;
+
+var precioIngresadoUno;
 	var precioIngresadoDos;
 	var precioIngresadoTres;
 	var promedio;
@@ -41,10 +87,7 @@ function Promedio ()
 	alert("El promedio es " + promedio);
 
 
-}
-function PrecioFinal () 
-{
-	var precioIngresadoUno;
+var precioIngresadoUno;
 	var precioIngresadoDos;
 	var precioIngresadoTres;
 	var suma;
@@ -64,10 +107,4 @@ function PrecioFinal ()
 
 	precioFinal= suma + iva 
 
-	alert("el precio final es " + precioFinal);
-
-
-
-
-
-}
+	alert("el precio final es " + precioFinal);*/

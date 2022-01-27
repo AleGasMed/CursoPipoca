@@ -1,13 +1,33 @@
-/*Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados 
-ej.: "Usted se llama José y tiene 66 años" 	*/
+/*5-(1pt.) pedir el ingreso de un planeta del sistema solar
+Si es la tierra mostrar "acá vivimos". Si está más cerca del sol, "acá hace más calor". Si está más lejos
+del sol, "acá hace más frio". Si no es un planeta valido informarlo.
+Aclaración: los planetas se ingresan en minúscula (Mercurio y Venus están antes que la tierra).*/
+
 function mostrar()
 {	
-   var nombre;
-   var edad;
+  var planeta;
 
-   nombre = document.getElementById("elNombre").value;
-   edad = document.getElementById("laEdad").value;
+  planeta = prompt("Inserte un planeta del sistema solar");
 
-   alert("Su nombre es " + nombre + " y tiene " + edad + " años");
+  switch(planeta)
+  {
+    case "mercurio":
+    case "venus":
+    alert("Acá hace más calor");
+    break;
+    case "tierra":
+    alert("Acá vivimos");
+    break;
+    case "marte":
+    case "jupiter":
+    case "saturno":
+    case "urano":
+    case "neptuno":
+    alert("Acá hace más frío");
+    break;
+    default:
+    alert("No es un planeta válido");
+    break;
+  }
 }
 

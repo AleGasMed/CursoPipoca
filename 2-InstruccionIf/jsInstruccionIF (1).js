@@ -8,7 +8,6 @@ function mostrar()
 	{
 		alert("Niña bonita");
 	}
-//tomo la edad  
 	
 	
 }//FIN DE LA FUNCIÓN

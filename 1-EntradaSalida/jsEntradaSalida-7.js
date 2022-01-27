@@ -1,63 +1,38 @@
-/*Debemos lograr tomar Los numeros por ID ,
-transformarlos a enteros (parseInt),realizar la operación correcta y 
-mostrar el resulto por medio de "ALERT"
-ej.: "la Resta es 750"*/ 
+/*7-(2pts.)Realizar el algoritmo que permita el ingreso por prompt de las notas (validar entre 0 y 10), el sexo (Validar el sexo “f” o “m”) de 5 alumnos, informar por alert:
+a) El promedio de las notas totales.
+b) La nota más baja y el sexo de esa persona.
+c) La cantidad de varones que su nota haya sido mayor o igual a 6
+"*/ 
 function sumar()
 {	
-    var numero1;
-    var numero2;
-    var suma;
+    var notas;
+    var sexo;
+    var promedio;
+    var contador = 0;
+    var suma = 0;
 
-    numero1 = document.getElementById("numeroUno").value;
-    numero2 = document.getElementById("numeroDos").value;
+    while(contador < 5)
+    {
+        notas = prompt("Inserte una nota entre el 0 y el 10");
 
-    suma = parseInt(numero1) + parseInt(numero2);
+        while(notas > 10)
+        {
+            notas = prompt("Incorrecto, vuelva a insertar un número entre el 0 y el 10");
+        }
 
-    alert("La suma es " + suma);
+        sexo = prompt("Inserte un sexo con las letras f o m");
 
-}
+        while(sexo != "f" && sexo != "m")
+        {
+            sexo = prompt("Incorrecto, vuelva a insertar la letra f ó m");
+        }
 
-function restar()
-{
-    var numero1;
-    var numero2;
-    var resta;
+        suma = parseInt(notas) + suma;
+        contador = contador + 1;
+    }
 
-    numero1 = document.getElementById("numeroUno").value;
-    numero2 = document.getElementById("numeroDos").value;
+    promedio = parseInt(suma) / 5;
 
-    resta = parseInt(numero1) - parseInt(numero2);
-
-    alert("La resta es " + resta);
-    
-}
-
-function multiplicar()
-{ 
-    var numero1;
-    var numero2;
-    var multiplicar;
-
-    numero1 = document.getElementById("numeroUno").value;
-    numero2 = document.getElementById("numeroDos").value;
-
-    multiplicar = parseInt(numero1) * parseInt(numero2);
-
-    alert("La multiplicación es " + multiplicar);
-
-}
-
-function dividir()
-{
-    var numero1;
-    var numero2;
-    var dividir;
-
-    numero1 = document.getElementById("numeroUno").value;
-    numero2 = document.getElementById("numeroDos").value;
-
-    dividir = parseInt(numero1) / parseInt(numero2);
-
-    alert("La división es " + dividir);
+    alert(promedio);
 }
 

@@ -3,18 +3,18 @@ function mostrar()
     var numero;
     var decision;
     var contador = 0;
-    var numeroMin;
     var numeroMax;
+    var numeroMin;
+    
 
     while(decision != "no")
     {
-        numero = prompt("Ingrese un número");
-        
+        numero = prompt("Coloque los números que quiera");
 
         if(contador == 0)
         {
-            numeroMin = numero;
             numeroMax = numero;
+            numeroMin = numero;
         }
 
         if(numero < numeroMin)
@@ -26,19 +26,19 @@ function mostrar()
             numeroMax = numero;
         }
 
+        contador = contador + 1;
+
         do
         {
-            decision = prompt("¿Desea continuar?")
+            decision = prompt("¿Desea continuar?");   
         }
-        while(decision != "si" && decision != "no" )
-
-        contador = contador + 1;
-        
+        while(decision != "no" && decision != "si")
     }
-    alert(numeroMin + " numero MINIMO");
-    alert(numeroMax + " numero MAXIMO");
+
     document.getElementById("maximo").value = numeroMax;
     document.getElementById("minimo").value = numeroMin;
+
+    
     
 }//FIN DE LA FUNCIÓN
 /*

@@ -3,19 +3,11 @@ function mostrar()
 repeticiones con números ASCENDENTE, 
 desde el 1 al 10.*/
 { 
-	var numero;
+    var numero = 0;
 
-	numero = 0
-
-	alert(numero);
-
-	while(numero < 10)
-	{
-		numero = numero + 1;
-		alert(numero);
-	}
-	
-	
-
-
+    while(numero < 10)
+    {
+        numero = numero + 1;
+        alert(numero);
+    }
 }//FIN DE LA FUNCIÓN
