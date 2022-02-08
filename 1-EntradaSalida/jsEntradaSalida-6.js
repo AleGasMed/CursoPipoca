@@ -1,13 +1,46 @@
-/*6-(1pt.) Se ingresa una hora. Si está entre las 6 y las 11 mostrar: “es de mañana”, si es desde
-las 12 a las 19: "es de tarde", de lo contrario informar que es de noche. Informar si la hora no es válida. Si es de noche y la hora es menor a 24 mostrar se debe agregar el mensaje: "a dormir".
+/*6-(1pt.) (SWITCH + IF) Se ingresa una nota. Si está entre las 0 y las 3 mostrar: "la próxima se puede", si es
+desde las 4 a las 6: "raspando", de lo contrario informar que aprobó. Informar si la nota no es válida. Si es
+aprobó y la nota es mayor a 8 se debe agregar el mensaje: "muy bien". Si es nota para “raspando” y la
+nota es menor a 5 se debe agregar el mensaje: "debes preocuparte más"
 */
 function sumar()
 {
-   var hora;
+   var nota;
 
-   hora = prompt("Inserte una hora");
+   nota = prompt("Inserte una nota");
 
-   if(hora >=6 && hora <=11)
+   while(nota > 10)
+   {
+      nota = prompt("Nota inválida, vuelva a insertar una nota");
+   }
+
+   switch(nota)
+   {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+         alert("La próxima se puede");
+         break;
+      case 4:
+      case 5:
+      case 6:
+         alert("Raspando")
+         if(nota < 5)
+         {
+            alert("Raspando, debes preocuparte más");
+         }
+         break;
+      case 8:
+      case 9:
+      case 10:
+         alert("Muy bien");
+         break;
+      default:
+         alert("La nota es inválida");
+   }
+
+   /*if(hora >=6 && hora <=11)
    {
       alert("Es de mañana");
    }
@@ -27,7 +60,7 @@ function sumar()
    else
    {
       alert("La hora es inválida");
-   }
+   }*/
 }
 /*switch(hora)//Error: se pudo haber hecho mas simplicado y en menos lineas
    {

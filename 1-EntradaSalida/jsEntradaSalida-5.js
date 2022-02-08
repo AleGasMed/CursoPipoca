@@ -1,33 +1,28 @@
-/*5-(1pt.) pedir el ingreso de un planeta del sistema solar
-Si es la tierra mostrar "acá vivimos". Si está más cerca del sol, "acá hace más calor". Si está más lejos
-del sol, "acá hace más frio". Si no es un planeta valido informarlo.
-Aclaración: los planetas se ingresan en minúscula (Mercurio y Venus están antes que la tierra).*/
+/*5-(1pt.) (SWITCH ) pedir el ingreso de un día de la semana, si es fin de semana mostrar " buen finde",
+ si es día hábil “ a trabajar”, si no es un día valido, también informarlo, usar una sola ventana alert */
 
 function mostrar()
 {	
-  var planeta;
+  var dias;
 
-  planeta = prompt("Inserte un planeta del sistema solar");
+  dias = prompt("Inserte un día de la semana en minúsculas y sin tildes");
 
-  switch(planeta)
+  switch(dias)
   {
-    case "mercurio":
-    case "venus":
-    alert("Acá hace más calor");
-    break;
-    case "tierra":
-    alert("Acá vivimos");
-    break;
-    case "marte":
-    case "jupiter":
-    case "saturno":
-    case "urano":
-    case "neptuno":
-    alert("Acá hace más frío");
-    break;
+    case "lunes":
+    case "martes":
+    case "miercoles":
+    case "jueves":
+    case "viernes":
+      alert("A trabajar");
+      break;
+    case "sabado":
+    case "domingo":
+      alert("buen finde");
+      break;
     default:
-    alert("No es un planeta válido");
-    break;
+      alert("No es un día válido");
+      break;
   }
-}
 
+}

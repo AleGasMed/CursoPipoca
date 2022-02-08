@@ -10,45 +10,41 @@ function SacarResto()
     var numero;
     var letra;
     var decision;
-    var sumaNeg = 0;
-    var sumaPos = 0;
+    var numerosPares = 0;
+    var numerosImpares = 0;
     var numeroNeg = 0;
     var numeroPos = 0;
+    var contador = 0;
     var ceros = 0;
-    var cantPares = 0;
-    var cantImpares = 0
-    var promedioPos;
-    var contador = 0
-    var numeroMin;
     var numeroMax;
+    var numeroMin;
     var letraMin;
     var letraMax;
 
-
     while(decision != "no")
     {
-        numero = prompt("Inserte un número entre el -100 y el 100");
-        letra = prompt("Inserte una letra");
+        numero = prompt("Ingrese un número  entre -100 y 100");
+
+        while(numero < -100 || numero > 100)
+        {
+            numero = prompt("Tiene que ingresar un número entre -100 y 100");
+        }
         
+        letra = prompt("Ingrese una letra");
+
+        do
+        {
+            decision = prompt("¿Desea continuar?");
+
+        }while(decision != "no" && decision != "si")
+
         if(numero[0] == "-")
         {
-            if(numero > 100)//error: deberia ser menor
-            {
-                numero = prompt("Vuelva a insertar un numero mayor a -100")//error: menor en vez de mayor
-            }
-            sumaNeg = sumaNeg + parseInt(numero);
             numeroNeg = numeroNeg + 1;
-            
         }
-        else if(numero > 0)//error: redundancia el else if
+        else if(numero > 0)
         {
-            sumaPos = sumaPos + parseInt(numero);
             numeroPos = numeroPos + 1;
-
-            if(numero > 100)
-            {
-                numero = prompt("Vuelva a insertar un número menor a 100")
-            }
         }
 
         if(numero == 0)
@@ -56,65 +52,56 @@ function SacarResto()
             ceros = ceros + 1;
         }
 
-        resto = numero % 2;
-
-        if(resto != 0)
+        if(numero % 2 == 0)
         {
-            numero = numero - 1;
+            numerosPares = numerosPares + 1;
         }
-    
-        while(numero != 0)
+        else if(numero % 2 != 0)
         {
-            numero = numero - 2;
-            cantPos = cantPos + 1;
-        }
-
-        if(resto == 0)
-        {
-            numero = parseInt(numero) - 1;
-        }
-    
-        while(numero >= 0)
-        {
-            numero = numero - 2;
-            cantImpares = cantImpares + 1;
+            numerosImpares = numerosImpares + 1;
         }
 
         if(contador == 0)
         {
-            numeroMax = numero;//ej: 10 = 10
             numeroMin = numero;
+            numeroMax = numero;
             letraMax = letra;
             letraMin = letra;
         }
-        else
-        {
-        if(numero < numeroMin)
+        else if(numero < numeroMin)
         {
             numeroMin = numero;
+            letraMin = letra;
         }
         else if(numero > numeroMax)
         {
             numeroMax = numero;
-        }
+            letraMax = letra;
         }
 
         
-
         contador = contador + 1;
-
-        do
-        {
-            decision = prompt("¿Desea continuar?");   
-        }
-        while(decision != "no" && decision != "si")
-
-        promedioPos = sumaPos / numeroPos;
     }
-    
-    document.write("La suma de los negativos es: " + sumaNeg + "<br>");
+
+    promedioPos = numeroPos / contador;
+
+    document.write("Cantidad de números pares: " + numerosPares + "<br>");
+    document.write("Cantidad de números impares: " + numerosImpares + "<br>");
     document.write("Cantidad de ceros: " + ceros + "<br>");
-    document.write("Cantidad de números pares: " + cantPares + "<br>");
-    document.write("Cantidad de números impares: " + cantImpares + "<br>");
-    document.write("Promedio de positivos: " + promedioPos + "<br>");
+    document.write("Promedio de todos los números positivos: " + promedioPos + "<br>");
+    document.write("Suma de todos los números negativo: " + numeroNeg + "<br>");
+    document.write("El número máximo y su letra: " + numeroMax + " y " + letraMax + "<br>");
+    document.write("El número mínimo y su letra: " + numeroMin + " y " + letraMin + "<br>");
+    
+    
+
 }
+
+/*Nivel 3 (iteraciones – validaciones-máximos y mínimos)
+7
+8-(2pts.) Realizar el algoritmo que permita iterar el ingreso de varios libros con cuatro datos por cada libro,
+nombre, cantidad de páginas, cantidad de ventas (0 o más) y tema (posibles temas: “robótica",
+"programación", "patrones", "base de datos”) validar e ingresar datos hasta que el usuario quiera e
+informar al terminar el ingreso por document.write: a) La cantidad de libros con páginas pares. b) La
+cantidad de libros con páginas impares. c) La cantidad de ceros ventas. d) El promedio de todas las ventas
+ingresadas. e) La suma de todas las páginas de los de "programación".*/

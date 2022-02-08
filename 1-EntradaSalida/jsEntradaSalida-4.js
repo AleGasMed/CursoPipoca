@@ -1,12 +1,11 @@
-/*4-(0,5pts.) Pedir dos números y mostrar el resultado:
-Si son iguales los muestro concatenados. Si el primero es mayor, los resto, de lo contrario los sumo.
-Si la suma es mayor a 10, además de mostrar el resultado, muestro el mensaje "la suma es xxx y supero
-el 10".*/
+/*4-(0,5pts.) (IF) Pedir dos números y mostrar el resultado: Si son iguales los muestro concatenados.
+ Si el primero es mayor, los divido, de lo contrario los sumo. Si la suma es menor a 50 , además de
+mostrar el resultado, muestro el mensaje "la suma es xxx y es menor a 50"*/
 function mostrar()
 {
 	var numero1;
 	var numero2;
-	var resta;
+	var division;
 	var suma;
 
 	numero1 = prompt("Inserte un número");
@@ -16,18 +15,20 @@ function mostrar()
 	{
 		alert("Números concatenados " + numero1 + " y " + numero2)
 	}
-	else if(numero1 > numero2)
+	
+	if(numero1 > numero2)
 	{
-		resta = parseInt(numero1) - parseInt(numero2);
-		alert("El resultado de la resta es " + resta);
+		division = parseInt(numero1) / parseInt(numero2);
+		alert("El resultado de la division es " + division);
 	}
-	else
+
+	if(numero1 < numero2)
 	{
 		suma = parseInt(numero1) + parseInt(numero2);
 
-		if(suma > 10)
+		if(suma < 50)
 		{
-			alert("La suma es " + suma + " y supera al 10");
+			alert("La suma es " + suma + " y es menor a 50");
 		}
 		else
 		{
